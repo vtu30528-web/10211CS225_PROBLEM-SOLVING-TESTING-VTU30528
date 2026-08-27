@@ -1,0 +1,11 @@
+class Solution {
+    public String dayOfTheWeek(int day, int month, int year) {
+        java.time.DayOfWeek dayOfWeek =
+            java.time.LocalDate.of(year, month, day).getDayOfWeek();
+
+        String result = dayOfWeek.toString();
+
+        return result.substring(0, 1)
+             + result.substring(1).toLowerCase();
+    }
+}
